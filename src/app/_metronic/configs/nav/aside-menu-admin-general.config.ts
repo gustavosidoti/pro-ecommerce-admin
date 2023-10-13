@@ -36,9 +36,30 @@ export const AsideMenuAdminGeneral = {
         svg: './assets/media/svg/icons/Home/Commode2.svg',
         page: '/categorias',
         submenu: [
+          // solo hay una página porque los formularios son ventanas emergentes
           {
             title: 'Lista categorias',
             page: '/categorias/list'
+          }
+        ]
+      },
+      {
+        title: 'Productos',
+        root: true,
+        name: "productos",
+        bullet: 'dot',
+        icon: 'flaticon2-user-outline-symbol',
+        svg: './assets/media/svg/icons/Devices/TV2.svg',
+        page: '/productos',
+        submenu: [
+          // hay tres páginas distintas
+          {
+            title: 'Crear Producto',
+            page: '/productos/registrar-producto'
+          },
+          {
+            title: 'Lista Producto',
+            page: '/productos/lista-de-todos-los-productos'
           }
         ]
       },
