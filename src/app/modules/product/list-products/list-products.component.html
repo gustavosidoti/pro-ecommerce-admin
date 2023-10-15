@@ -17,6 +17,44 @@
         <ng-container *ngIf="isLoading$ | async">
             <span class="spinner spinner-primary ml-5"></span>
         </ng-container>
+        <div class="form form-label-right">
+          <div class="form-group row">
+            <div class="col-lg-3">
+              <input
+                type="text"
+                class="form-control"
+                name="searchText"
+                placeholder="Buscar"
+                value=""
+                [(ngModel)]="search"
+                (keyup.enter)="allProducts()"
+              /><small class="form-text text-muted"
+                ><b>Buscar</b> por  titulo de producto </small
+              >
+            </div>
+            <div class="col-lg-3">
+              <select
+                  class="form-control"
+                  name="categorie"
+                  [(ngModel)]="categorie"
+              >
+                  <option value="">Ninguno</option>
+                  <ng-container *ngFor="let item of categories">
+                      <option [value]="item._id">{{ item.title }}</option>
+                  </ng-container>
+                  
+              </select>
+                    <small class="form-text text-muted"
+                ><b>Buscar</b> por  categoria </small
+              >
+            </div>
+            <div class="col-3">
+              <button class="btn btn-primary" (click)="allProducts()">BUSCAR</button>
+              <button class="btn btn-dark" (click)="refresh()">Refresh</button>
+            </div>
+          </div>
+        </div>
+        
         <div class="row">
             <div class="col-12">
               <div class="table-responsive">
@@ -36,7 +74,7 @@
                     <tbody>
                         <tr *ngFor="let product of products">
                           <td>
-                            <img [src]="URL_BACKEND+'api/products/uploads/products/'+product.portada" style="width: 60px;" alt="" srcset="">
+                            <img [src]= "product.imagen" style="width: 60px;" alt="" srcset="">
                             
                           </td>
                           <td>{{ product.title }}</td>

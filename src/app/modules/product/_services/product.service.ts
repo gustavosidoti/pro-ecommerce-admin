@@ -21,10 +21,23 @@ export class ProductService {
     this.isLoading$ = this.isLoadingSubject.asObservable();
   }
 
-  allProducts(search:any = ''){
+  allProducts(search='', categorie=null){
     this.isLoadingSubject.next(true);
     let headers = new HttpHeaders({'token': this.authservice.token});
-    let URL = URL_SERVICIOS+"/products/list?search="+search;
+
+    // validamos si viene el search
+    let LINK = "";
+    if(search){
+      LINK += "?search="+search
+    }else{
+      LINK += "?search=";
+    }
+    // validamos si viene una categoria en la peticion
+    if(categorie){
+      LINK +="&categorie="+categorie;
+    }
+
+    let URL = URL_SERVICIOS+"/products/list"+LINK;
     return this.http.get(URL,{headers: headers}).pipe(
       finalize(() => this.isLoadingSubject.next(false))
     );
