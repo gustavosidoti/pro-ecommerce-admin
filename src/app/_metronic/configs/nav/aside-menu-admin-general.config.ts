@@ -63,5 +63,40 @@ export const AsideMenuAdminGeneral = {
           }
         ]
       },
+      {
+        title: 'Sliders',
+        root: true,
+        name: "sliders",
+        bullet: 'dot',
+        icon: 'flaticon2-user-outline-symbol',
+        svg: './assets/media/svg/icons/Design/Image.svg',
+        page: '/sliders',
+        submenu: [
+          // solo hay una página porque los formularios son ventanas emergentes
+          {
+            title: 'Lista sliders',
+            page: '/sliders/lista-sliders'
+          }
+        ]
+      },
+      {
+        title: 'Cupones',
+        root: true,
+        name: "cupones",
+        bullet: 'dot',
+        icon: 'flaticon2-user-outline-symbol',
+        svg: './assets/media/svg/icons/Devices/Cardboard-vr.svg',
+        page: '/cupones',
+        submenu: [
+          {
+            title: 'Registrar Cupon',
+            page: '/cupones/registrar-cupon'
+          },
+          {
+            title: 'Lista Cupones',
+            page: '/cupones/listar-cupones'
+          },
+        ]
+      },
     ]
 }

@@ -1,0 +1,80 @@
+<div class="card card-custom gutter-b">
+    <div class="card-header">
+      <div class="card-title">
+        <h3 class="card-label"><i class="icon-2x text-dark-50 flaticon-imac mx-2"></i> AGREGAR NUEVO CUPON</h3>
+      </div>
+      <div class="card-toolbar">
+        
+      </div>
+    </div>
+    <div class="card-body">
+        <ng-container *ngIf="isLoading$ | async">
+            <span class="spinner spinner-primary ml-5"></span>
+        </ng-container>
+
+    <div class="form-group row">
+        <div class="col-4">
+            <div class="form-group">
+                <label>Código de cupón: <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" placeholder="" [(ngModel)]="code" name="code">
+                <span class="form-text text-muted">Ingresa el código</span>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <label>Tipo de descuento</label>
+                <div class="radio-list">
+                    <label class="radio">
+                        <input type="radio" [checked]="type_discount == 1" (click)="checkedTypeDiscount(1)" name="radios1">
+                        <span></span>
+                        PORCENTAJE
+                    </label>
+                    
+                    <label class="radio">
+                        <input type="radio" [checked]="type_discount == 2" (click)="checkedTypeDiscount(2)" name="radios1">
+                        <span></span>
+                        MONEDA
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <label>Descuento: <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" placeholder="" [(ngModel)]="discount" name="discount">
+                <span class="form-text text-muted">Ingresa la cantidad</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        
+        <div class="col-4">
+            <div class="form-group">
+                <label>Tipo de uso</label>
+                <div class="radio-list">
+                    <label class="radio">
+                        <input type="radio" [checked]="type_count == 1" (click)="checkedTypeCount(1)" name="radios2">
+                        <span></span>
+                        ILIMITADO
+                    </label>
+                    
+                    <label class="radio">
+                        <input type="radio" [checked]="type_count == 2" (click)="checkedTypeCount(2)" name="radios2">
+                        <span></span>
+                        LIMITADO
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group" *ngIf="type_count == 2">
+                <label>N° de Usos: <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" placeholder="" [(ngModel)]="num_use" name="num_use">
+                <span class="form-text text-muted">Ingresa la cantidad</span>
+            </div>
+        </div>
+    </div>
+
+ </div>
+</div>
