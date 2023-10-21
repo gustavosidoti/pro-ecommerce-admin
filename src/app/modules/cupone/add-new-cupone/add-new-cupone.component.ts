@@ -3,6 +3,7 @@ import { CuponeService } from '../_services/cupone.service';
 import { ProductsComponent } from '../../e-commerce/products/products.component';
 import { Toaster } from 'ngx-toast-notifications';
 import { NoticyAlertComponent } from '../../../componets/notifications/noticy-alert/noticy-alert.component';
+import { element } from 'protractor';
 
 @Component({
   selector: 'app-add-new-cupone',
@@ -84,4 +85,98 @@ categories_selected:any = [];
         }
       }
   }
+
+  // remueve los productos de la lista
+  removeProduct(product){
+    let INDEX = this.products_selected.findIndex(item => item._id == product._id);
+    if(INDEX != -1){
+      this.products_selected.splice(INDEX,1);
+    }
+  }
+  // remueve las categorías de la lista
+  removeCategorie(categorie){
+    let INDEX = this.categories_selected.findIndex(item => item._id == categorie._id);
+    if(INDEX != -1){
+      this.categories_selected.splice(INDEX,1);
+    }
+  }
+
+  save(){
+    // validaciones de campos vacios
+    if(!this.code || !this.discount){
+
+      this.toaster.open(NoticyAlertComponent,{ text:`danger-'UPPS ! ALGUNOS CAMPOS ESTAN VACIOS'`});
+      return;
+    }
+
+    if(this.type_discount == 2){
+        if(this.type_discount == 0){
+           this.toaster.open(NoticyAlertComponent,{ text:`danger-'UPPS ! TIENES QUE DIGITAR EL NUMERO DE USOS'`});
+           return;
+        }
+      }   
+
+      if(this.type_segment == 1){
+        if(this.products_selected == 0){
+           this.toaster.open(NoticyAlertComponent,{ text:`danger-'UPPS ! TIENES QUE SELECCIONAR UN PRODUCTO AL MENOS'`});
+           return;
+        }
+      }   
+
+      if(this.type_segment == 2){
+        if(this.categories_selected.length == 0){
+           this.toaster.open(NoticyAlertComponent,{ text:`danger-'UPPS ! TIENES QUE SELECCIONAR UNA CATEGORIA AL MENOS'`});
+           return;
+        }
+      }   
+
+
+    let PRODUCTS = [];
+    let CATEGORIES = [];
+
+    this.products_selected.forEach(element =>{
+      PRODUCTS.push({_id: element._id});
+    });
+
+    this.categories_selected.forEach(element =>{
+      CATEGORIES.push({_id: element._id});
+    })
+
+    let data = {
+      code: this.code,
+      type_discount: this.type_discount,
+      discount: this.discount,
+      type_count: this.type_count,
+      num_use: this.num_use,
+      type_segment: this.type_segment,
+      products: PRODUCTS,
+      categories: CATEGORIES
+    };
+    this._cuponService.createCupone(data).subscribe((resp:any)=>{
+      console.log(resp);
+
+      if(resp.message == 403){
+        this.toaster.open(NoticyAlertComponent,{ text:`danger-'${resp.message_text}'`});
+        return;
+      }else{
+        this.toaster.open(NoticyAlertComponent,{ text:`primary-'${resp.message_text}'`});
+
+        this.products_selected = [];
+        this.categories_selected = [];
+        this.code = null;
+        this.type_discount = 1;
+        this.discount = null;
+        this.type_count = 1;
+        this.num_use = null;
+        this.type_segment = 1;
+
+        return;
+      }
+
+    })
+  }
+
+
+
+ // fin de la clase
 }
