@@ -9,11 +9,11 @@ It is an administrator to manage products, offers, coupons, and discounts in e-c
 </p>
 
 <h3>Views</h3>
-<img align="center" src="https://res.cloudinary.com/dsnccd8pt/image/upload/v1704659056/Administrador-ecommerce/login_xfersi.png" alt="https://www.linkedin.com/in/gustavo-sidoti/" height="600" width="800" />
-<img align="center" src="https://res.cloudinary.com/dsnccd8pt/image/upload/v1704659056/Administrador-ecommerce/gestionUsuarios_gld5ia.png" alt="https://www.linkedin.com/in/gustavo-sidoti/" height="600" width="800" />" 
-<img align="center" src="https://res.cloudinary.com/dsnccd8pt/image/upload/v1704659056/Administrador-ecommerce/crear-productos_kyoptt.png" alt="https://www.linkedin.com/in/gustavo-sidoti/" height="600" width="800" />
-<img align="center" src="https://res.cloudinary.com/dsnccd8pt/image/upload/v1704659056/Administrador-ecommerce/descuentos_azbcht.png" alt="https://www.linkedin.com/in/gustavo-sidoti/" height="600" width="800" />
-<img align="center" src="https://res.cloudinary.com/dsnccd8pt/image/upload/v1704659056/Administrador-ecommerce/cupones_vopno2.png" alt="https://www.linkedin.com/in/gustavo-sidoti/" height="600" width="800" />
+<img align="center" src="https://res.cloudinary.com/dsnccd8pt/image/upload/v1704659056/Administrador-ecommerce/login_xfersi.png" alt="https://www.linkedin.com/in/gustavo-sidoti/" height="600" width="1000" />
+<img align="center" src="https://res.cloudinary.com/dsnccd8pt/image/upload/v1704659056/Administrador-ecommerce/gestionUsuarios_gld5ia.png" alt="https://www.linkedin.com/in/gustavo-sidoti/" height="600" width="1000" />" 
+<img align="center" src="https://res.cloudinary.com/dsnccd8pt/image/upload/v1704659056/Administrador-ecommerce/crear-productos_kyoptt.png" alt="https://www.linkedin.com/in/gustavo-sidoti/" height="600" width="1000" />
+<img align="center" src="https://res.cloudinary.com/dsnccd8pt/image/upload/v1704659056/Administrador-ecommerce/descuentos_azbcht.png" alt="https://www.linkedin.com/in/gustavo-sidoti/" height="600" width="1000" />
+<img align="center" src="https://res.cloudinary.com/dsnccd8pt/image/upload/v1704659056/Administrador-ecommerce/cupones_vopno2.png" alt="https://www.linkedin.com/in/gustavo-sidoti/" height="600" width="1000" />
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
