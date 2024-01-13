@@ -8,6 +8,13 @@ It is an administrator to manage products, offers, coupons, and discounts in e-c
 <p align="left"> <a href="https://angular.io/tutorial" rel="nofollow"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="angular" width="40" height="40"</a> <a href="https://www.typescriptlang.org/docs/handbook/2/everyday-types.html" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg" alt="typescript" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a><a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a> 
 </p>
 
+<h3>Main Features</h3>
+<ul>
+  <li>JWT</li>
+  <li>Guards</li>
+  <li>Modules</li>
+</ul>
+
 <h3>Views</h3>
 <img align="center" src="https://res.cloudinary.com/dsnccd8pt/image/upload/v1704659056/Administrador-ecommerce/login_xfersi.png" alt="https://www.linkedin.com/in/gustavo-sidoti/" height="600" width="1000" />
 <img align="center" src="https://res.cloudinary.com/dsnccd8pt/image/upload/v1704659056/Administrador-ecommerce/gestionUsuarios_gld5ia.png" alt="https://www.linkedin.com/in/gustavo-sidoti/" height="600" width="1000" />" 
